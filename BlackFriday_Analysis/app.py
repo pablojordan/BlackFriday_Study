@@ -25,7 +25,7 @@ def model():
 @app.route("/dataTable")
 def testTable():
     
-    return jsonify("testTableFinalCLEAN100.json")
+    return render_template("testTableFinalCLEAN100.json")
 
 if __name__ == '__main__':
     app.run(debug = True, port = 5021)  #
