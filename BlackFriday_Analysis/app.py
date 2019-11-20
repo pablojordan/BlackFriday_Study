@@ -14,7 +14,9 @@ from sklearn.model_selection import cross_val_score
 #################################################
 
 app = Flask(__name__)
-
+pickle_in = open("treeRegressor.pickle","rb")
+   
+model = pickle.load(pickle_in)
 @app.route("/", methods=["GET", "POST"])
 def home():
     # print("we hit the home function")
@@ -31,9 +33,8 @@ def home():
     output11 = ""
 
     if request.method == "POST":
-        print("Reading scandir 1", os.scandir('.'))
         pickle_in = open("treeRegressor.pickle","rb")
-        print("Reading scandir 2", os.scandir('.'))
+        
         model = pickle.load(pickle_in)
         # print("we are now in post")
         # print("form", request.form)
