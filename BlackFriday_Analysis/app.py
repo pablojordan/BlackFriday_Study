@@ -17,9 +17,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-
-    
-    print("we hit the home function")
+    # print("we hit the home function")
     output1 = ""
     output2 = ""
     output3 = ""
@@ -33,10 +31,12 @@ def home():
     output11 = ""
 
     if request.method == "POST":
-        pickle_in = open("../treeRegressor.pickle","rb")
+        print("Reading scandir 1", os.scandir('.'))
+        pickle_in = open("treeRegressor.pickle","rb")
+        print("Reading scandir 2", os.scandir('.'))
         model = pickle.load(pickle_in)
-        print("we are now in post")
-        print("form", request.form)
+        # print("we are now in post")
+        # print("form", request.form)
         gender = float(request.form["gender"])
         age = float(request.form["age"])
         occupation = float(request.form["occupation"])
@@ -49,7 +49,7 @@ def home():
 
         # data must be converted to df with matching feature names before predict
         data = pd.DataFrame(np.array([[gender, age, occupation, city, currentCity, marital, prodCat1, prodCat2, prodCat3]]), columns=[gender, age, occupation, city, currentCity, marital, prodCat1, prodCat2, prodCat3])
-        print("model options", dir(model)) # Print model variables
+        # print("model options", dir(model)) # Print model variables
         result = model.predict(data)
         if gender == 0:
             response1 = "Female"
