@@ -14,9 +14,9 @@ from sklearn.model_selection import cross_val_score
 #################################################
 
 app = Flask(__name__)
-pickle_in = open("treeRegressor.pickle","rb")
-   
-model = pickle.load(pickle_in)
+with open('treeRegressor.pickle', 'rb') as fh:
+    model = pickle.load(fh)
+print("model options 1", dir(model))
 @app.route("/", methods=["GET", "POST"])
 def home():
     # print("we hit the home function")
@@ -33,9 +33,13 @@ def home():
     output11 = ""
 
     if request.method == "POST":
-        pickle_in = open("treeRegressor.pickle","rb")
+        with open('treeRegressor.pickle', 'rb') as fh:
+            model = pickle.load(fh)
+        print("model options 2", dir(model))
         
-        model = pickle.load(pickle_in)
+        # pickle_in = open("treeRegressor.pickle","rb")
+        
+        # model = pickle.load(pickle_in)
         # print("we are now in post")
         # print("form", request.form)
         gender = float(request.form["gender"])
@@ -52,6 +56,7 @@ def home():
         data = pd.DataFrame(np.array([[gender, age, occupation, city, currentCity, marital, prodCat1, prodCat2, prodCat3]]), columns=[gender, age, occupation, city, currentCity, marital, prodCat1, prodCat2, prodCat3])
         # print("model options", dir(model)) # Print model variables
         result = model.predict(data)
+
         if gender == 0:
             response1 = "Female"
         else:
