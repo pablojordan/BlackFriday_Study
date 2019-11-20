@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BlackFriday</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-
 </head>
 
 <body data-spy="scroll" data-target="#main-nav" id="home">
@@ -17,7 +15,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" id="main-nav">
         <div class="container">
             <a href="#home" class="navbar-brand">
-                <img src="../static/images/logo.jpg" width="250" height="70" alt="">
+                <img src="static/images/logo.jpg" width="250" height="70" alt="">
             </a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -28,6 +26,9 @@
                     <a href="#home" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#eda-head-section" class="nav-link">EDA</a>
+                </li>
+                <li class="nav-item">
                     <a href="#analysis-head-section" class="nav-link">ANALYSIS</a>
                 </li>
                 <li class="nav-item">
@@ -35,13 +36,6 @@
                 </li>
                 <li class="nav-item">
                         <a href="#data-head-section" class="nav-link">DATA</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#predictor-head-section" class="nav-link">PREDICTOR</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#meet-head-section" class="nav-link">MEET US</a>
                 </li>
 
                 <form class="form-inline ml-auto">
@@ -57,70 +51,134 @@
 
  <!--Home section-->
  <header id="home-section">
-    <div class="dark-overlay">
-      <div class="home-inner container">
-        <h2>
-          Can we estimate the consumer purchase amount against various products categories during BlackFriday?
-        </h2>
+        <div class="dark-overlay">
+            <div class="home-inner container">
+                <div class="row">
+                    <div class="col-lg-8 d-none d-lg-block">
+                        <h1 class="display-4">
+                            <strong>Can we estimate the consumer purchase amount against various products categories during BlackFriday?</strong>
+                        </h1>
+                        <img src="../static/images/Main.png" alt="" class="img-fluid">
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x"></i>
+                            </div>
+                            <div class="p-4 align-self-end">
+                                The goal is to understand the customer purchase behavior (specifically, purchase amount) against various products of different categories. We have purchase summary data of various customers for selected high volumen products from previous months.
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x"></i>
+                            </div>
+                            <div class="p-4 align-self-end">
+                                The data also contains customer demographics (age, gender, marital status, city_type, stay_in_current_city), product category details and total purchase_amount from previous month.
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <div class="p-4 align-self-start">
+                                <i class="fas fa-check fa-2x"></i>
+                            </div>
+                            <div class="p-4 align-self-end">
+                                There is a strong need to build a model to predict the purchase amount against vaious products which will help them to create personalized offer for customers against different products.
+                            </div>
+                        </div>
+
+                        <a href="https://github.com/pablojordan/BlackFriday_Study/raw/master/BlackFriday_Analysis/data/train.zip"  class="btn btn-success" role="button">Download Raw Train Data (CSV)</a>
+                        <br>
+                        </br>
+    
+                        <a href="https://github.com/pablojordan/BlackFriday_Study/raw/master/BlackFriday_Analysis/data/test.zip"  class="btn btn-success" role="button">Download Raw Test Data (CSV)</a>
+                    </div>
+
+                    <div class="col-lg-4 ">
+                        <div class="card bg-primary text-center card-form">
+                            <div class="card-body">
+                                <h3>Sign Up Today</h3>
+                                <p>Please fill out this form to register</p>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-lg" placeholder="Username">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control form-control-lg" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-lg" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-lg" placeholder="Confirm Password">
+                                    </div>
+                                    <input type="submit" value="Submit" class="btn btn-outline-light btn-block">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+
+
+<!--EDA HEAD-->
+<section id="eda-head-section">
+    <div class="container">
         <div class="row">
-          <div class="col-lg-6">
-            <img src="../static/images/Main.png" alt="" height="460px" class="img-fluid">
-          </div>
-          <div class="col-lg-6">
-            <div class="d-flex">
-              <div class="p-4 align-self-start">
-                <i class="fas fa-check fa-2x"></i>
-              </div>
-              <div class="p-4 align-self-end" >
-                The goal is to understand the customer purchase behavior (specifically, purchase amount) against various products of different categories. We have purchase summary data of various customers for selected high volumen products from previous months.
-              </div>
+            <div class="col text-center py-5">
+                <h1 class="display-4">Exploratory Data Analysis</h1>
+                <p class="lead">In statistics, exploratory data analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods.A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task. </p>
+                <a href="#" class="btn btn-outline-secondary">Find Out More</a>
             </div>
-
-            <div class="d-flex">
-              <div class="p-4 align-self-start">
-                  <i class="fas fa-check fa-2x"></i>
-              </div>
-              <div class="p-4 align-self-end">
-                  The data also contains customer demographics (age, gender, marital status, city_type, stay_in_current_city), product category details and total purchase_amount from previous month.
-              </div>
-            </div>
-
-            <div class="d-flex">
-              <div class="p-4 align-self-start">
-                  <i class="fas fa-check fa-2x"></i>
-              </div>
-              <div class="p-4 align-self-end">
-                  There is a strong need to build a model to predict the purchase amount against vaious products which will help them to create personalized offer for customers against different products.
-              </div>
-            </div>      
-          </div>
         </div>
-
-
-        <!-- <a href="https://github.com/pablojordan/BlackFriday_Study/raw/master/BlackFriday_Analysis/data/train.zip"  class="btn btn-success" role="button">Download Raw Train Data (CSV)</a>
-        <br>
- 
-        <a href="https://github.com/pablojordan/BlackFriday_Study/raw/master/BlackFriday_Analysis/data/test.zip"  class="btn btn-success" role="button">Download Raw Test Data (CSV)</a>
-        -->    
-      </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/img1.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <img src="img/img1.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <p></p>
+        </div>
     </div>
-
- </header>
+</section>
 
 
 <!--Anatlysis HEAD-->
 <section id="analysis-head-section">
-    <div class="container">    
-      <div class="row">
-        <div class="col text-center py-5">
-          <h1 class="display-4">Analysis</h1>
-          <p class="lead">In statistics, exploratory data analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods.A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task. </p>
-        
-      <div class='tableauPlaceholder' id='viz1574210111302' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_final1&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EDA_final1&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ED&#47;EDA_final1&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1574210111302');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1050px';vizElement.style.height='477px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1050px';vizElement.style.height='477px';} else { vizElement.style.width='100%';vizElement.style.height='927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-      <div class='tableauPlaceholder' id='viz1574210246212' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;42&#47;42Z9X6C7M&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;42Z9X6C7M' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;42&#47;42Z9X6C7M&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1574210246212');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1050px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1050px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center py-5">
+                <h1 class="display-4">Analysis</h1>
+                <p class="lead">In statistics, exploratory data analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods.A statistical model can be used or not, but primarily EDA is for seeing what the data can tell us beyond the formal modeling or hypothesis testing task. </p>
+                <a href="#" class="btn btn-outline-secondary">Find Out More</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="#" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <img src="#" alt="" class="img-fluid">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="#" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <img src="#" alt="" class="img-fluid">
+            </div>
+        </div>
     
-      </div> 
-    </div>
+
+        <div class="row">
+            <p></p>
+        </div>
+        </div>
 </section>
 
 <!--Model HEAD-->
@@ -135,21 +193,57 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 text-center py-5" >
-                  <h3 align="center">Decision Tree Regressor Model Evaluation</h3>
-                  <p>Decision tree regression observes features of an object and trains a model in the structure of a tree to predict data in the future to produce meaningful continuous output. Continuous output means that the output/result is not discrete, i.e., it is not represented just by a discrete, known set of numbers or values.
-                      Decision tree regressor uses MSE and similar metrics to determine splits.</p>
-                  <p> <strong>RMSE: </strong> 2992.87</p>
-                  <p> <strong>Coefficient of Determination (a.k.a R2 in LR):</strong>  0.6425</p>
-                  <img src="../static/images/regressor.png" alt="" class="center" id="decisionT">
-                  <a href="Other_Model.html" class="btn btn-outline-secondary">Other Models</a>
-
+                    <div class="col-6" >
+                        <h3>Decision Tree Regressor Model Evaluation</h3>
+                        <p>Decision tree regression observes features of an object and trains a model in the structure of a tree to predict data in the future to produce meaningful continuous output. Continuous output means that the output/result is not discrete, i.e., it is not represented just by a discrete, known set of numbers or values.
+                           Decision tree regressor uses MSE and similar metrics to determine splits.</p>
+                        <p> <strong>RMSE: </strong> 2992.87</p>
+                        <p> <strong>Coefficient of Determination (a.k.a R2 in LR):</strong>  0.6425</p>
+                        <img src="../static/images/regressor.png" alt="" class="img-fluid">
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                        <h3>Multivariate Linear Regression Model Evaluation</h3>
+                        <p>Multivariate Regression is a method used to measure the degree at which more than one independent variable (predictors) and more than one dependent variable (responses), are linearly related. The method is broadly used to predict the behavior of the response variables associated to changes in the predictor variables, once a desired degree of relation has been established.</p>
+                        <p> <strong>RMSE:</strong>  0.9297</p>
+                        <p> <strong>R2:</strong> 0.1357</p>
+                    <img src="../static/images/regression_coef.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                        <h3>LASSO Regression Model Evaluation</h3>
+                        <p>Type of linear regression that uses shrinkage. Shrinkage is where data values are shrunk towards a central point, like the mean. This particular type of regression is well-suited for models showing high levels of muticollinearity. Multicollinearity generally occurs when there are high correlations between two or more predictor variables. In other words, one predictor variable can be used to predict the other, hence creating redundant information.</p>
+                        <p> <strong>RMSE:</strong> 0.9302</p>
+                        <p> <strong>R2:</strong> 0.1348</p>
+                        <p> <strong>Total Features dropped:</strong> 10</p>
+                    <img src="../static/images/lasso_coef.png" alt="" class="img-fluid">
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-md-6">
+                        <h3>RIDGE Regression Model Evaluation</h3>
+                        <p>Ridge Regression is a technique for analyzing multiple regression data that suffer from multicollinearity. When multicollinearity occurs, least squares estimates are unbiased, but their variances are large so they may be far from the true value. By adding a degree of bias to the regression estimates, ridge regression reduces the standard errors. It is hoped that the net effect will be to give estimates that are more reliable.</p>
+                        <p> <strong>RMSE:</strong> 0.9297</p>
+                        <p> <strong>R2:</strong> 0.1357</p>
+                        <p> <strong>Total Features dropped:</strong> 0</p>
+                    <img src="../static/images/ridge_coef.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                        <h3>ElasticNet Regression Model Evaluation</h3>
+                        <p>In statistics and, in particular, in the fitting of linear or logistic regression models, the elastic net is a regularized regression method that linearly combines the L1 and L2 penalties of the lasso and ridge methods.</p>
+                        <p> <strong>RMSE:</strong> 0.9299</p>
+                        <p> <strong>R2:</strong> 0.1354</p>
+                        <p> <strong>Total Features dropped:</strong> 9</p>
+                    <img src="../static/images/elasticnet_coef.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        
+    
+            <div class="row">
+                <p></p>
+            </div>
+            </div>
 </section>
-
-
 <!--Data HEAD-->
 <section id="data-head-section">
         <div class="container">
@@ -161,10 +255,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col"  id="table1H">
+                <div class="col-md-4">
                         <h4>Features Coefficients</h4>
-                    <div class="table-responsive">
-                        <table class="table table-striped" id="table1">
+                    <div class="table-responsive" style="overflow-x:auto; overflow-y:auto; max-height:470px; max-width: auto;">
+                        <table class="table table-striped">
                         <thead>
                           <tr style="text-align: left;">
                             <th></th>
@@ -223,10 +317,10 @@
                         </div>
                     <img src="#" alt="" class="img-fluid">
                 </div>
-                <div class="col">
+                <div class="col-md-8">
                         <h4>Test File Results Table - 100 Records</h4>
-                        <div class="table-responsive" >
-                                <table class="table table-striped" id="table2">
+                        <div class="table-responsive" style="overflow-x:auto; overflow-y:auto; max-height:470px; max-width: auto;">
+                                <table class="table table-striped">
                                 <thead>
                                   <tr style="text-align: left;">
                                     <th></th>
@@ -1756,18 +1850,21 @@
                     <img src="#" alt="" class="img-fluid">
                     <a href="https://github.com/pablojordan/BlackFriday_Study/raw/master/BlackFriday_Analysis/data/TableFinalCSV.zip"  class="btn btn-info" role="button">Download Final Results Table (CSV)</a>
                     <br>
+                    </br>
 
-                </br>
                     <a href="https://github.com/pablojordan/BlackFriday_Study/raw/master/BlackFriday_Analysis/data/TableFinalJSON.zip"  class="btn btn-info" role="button">Download Final Results Table (JSON)</a>
                 </div>
                 <div class="col-md-6">
                     <img src="#" alt="" class="img-fluid">
                 </div>
             </div>
-      
+        
+    
+            <div class="row">
+                <p></p>
+            </div>
             </div>
 </section>
-
 <!--Model Live-->
 <section id="predictor-head-section">
   <div class="container">
@@ -1780,7 +1877,6 @@
       </div>
       <div class="row">
           <div class="col-md-6">
-            <h2>Model Inputs</h2>
               <form method="POST" action="/" role="form", name="donationform">
                   <div class="form-group">
                       <label>Gender</label>
@@ -1822,7 +1918,7 @@
                   <label>Product Category 3</label>
                   <input type="text" class="form-control" name="prodCat3" placeholder="1 to 18">
               </div>
-                  <input type="submit" value="Submit" class="btn btn-primary" role="button">
+                  <input type="submit" value="submit" class="btn btn-primary" role="button">
               </form>
           </div>
           <div class="col-md-6">
@@ -1846,114 +1942,6 @@
       </div>
   </div>
 </section>
-
-<!--Meet US-->
-<section id="meet-head-section" class="my-5 text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="info-header mb-5">
-          <h1 class="text-dark pb-3">
-            Meet The Authors
-          </h1>
-        </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-lg-4 col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <img src="../static/images/pablo.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-            <h3>
-              Pablo Jordan
-            </h3>
-            <h5 class="text-muted">Lead Writer</h5>
-            <div class="d-flex justify-content-cent">
-              <div class="p-4">
-                <a href="http://facebook.com" >
-                  <i class="fab fa-facebook"></i>
-                </a>
-              </div>
-
-              <div class="p-4">
-                <a href="https://www.linkedin.com/" >
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </div>
-
-              <div class="p-4">
-                <a href="https://github.com/pablojordan/BlackFriday_Study" >
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-4">
-          <div class="card">
-              <div class="card-body">
-                <img src="../static/images/meng.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
-                <h3>
-                  Meng Chen
-                </h3>
-                <h5 class="text-muted">Second Writer</h5>
-                <div class="d-flex justify-content-cent">
-                  <div class="p-4">
-                    <a href="http://facebook.com" >
-                      <i class="fab fa-facebook"></i>
-                    </a>
-                  </div>
-    
-                  <div class="p-4">
-                    <a href="https://www.linkedin.com/" >
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                  </div>
-    
-                  <div class="p-4">
-                    <a href="https://github.com/pablojordan/BlackFriday_Study" >
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="col-lg-4 col-md-4">
-          <div class="card bg-primary text-center card-form">
-              <div class="card-body">
-                  <h3>Sign Up Today</h3>
-                  <p>Please fill out this form to register</p>
-                  <form>
-                      <div class="form-group">
-                          <input type="text" class="form-control form-control-lg" placeholder="Username">
-                      </div>
-                      <div class="form-group">
-                          <input type="email" class="form-control form-control-lg" placeholder="Email">
-                      </div>
-                      <div class="form-group">
-                          <input type="password" class="form-control form-control-lg" placeholder="Password">
-                      </div>
-                      <div class="form-group">
-                          <input type="password" class="form-control form-control-lg" placeholder="Confirm Password">
-                      </div>
-                      <input type="submit" value="Submit" class="btn btn-outline-light btn-block">
-                  </form>
-              </div>
-          </div>
-      </div>
-
-      </div>
-    </div>
-
-</section>
-
-
 
 <!--footer-->
 <footer id="main-footer" class="bg-dark">
@@ -2039,26 +2027,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
     $('#year').text(new Date().getFullYear())
-</script>
-
-
-
-<!-- DATA TABLES SCRIPT -->
-
-<script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-   $(function() {
-    $("#table2").dataTable({
-        "iDisplayLength":10,
-        "aLengthMenu": [[10,20, 50, 100,  -1], [10, 25, 50, 100, "All"]]
-       });
-      $("#table1").dataTable({
-      "iDisplayLength":10,
-      "aLengthMenu": [[10,20, 50, 100,  -1], [10, 25, 50, 100, "All"]]
-      });
-   });
-
 </script>
 </body>
 </html>
