@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Other Models</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
+<section>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" id="main-nav">
+        <div class="container">
+            <a href="#home" class="navbar-brand">
+                <img src="../static/images/logo.jpg" width="250" height="70" alt="">
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#analysis-head-section" class="nav-link">ANALYSIS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#model-head-section" class="nav-link">MODEL</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#data-head-section" class="nav-link">DATA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#predictor-head-section" class="nav-link">PREDICTOR</a>
+                </li>
+    
+
+                <form class="form-inline ml-auto">
+                    <input type="text" class="form-control mr-2" placeholder="Search">
+                    <button class="btn btn-outline-light">Search</button>
+                </form>
+            </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+
+
+<!--Model Section-->
+<header id="model-section">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card border-primary">
+                        <h4>Multivariate Linear Regression Model Evaluation</h4>
+                        <p>Multivariate Regression is a method used to measure the degree at which more than one independent variable (predictors) and more than one dependent variable (responses), are linearly related. The method is broadly used to predict the behavior of the response variables associated to changes in the predictor variables, once a desired degree of relation has been established.</p>
+                        <p> <strong>RMSE:</strong>  0.9297</p>
+                        <p> <strong>R2:</strong> 0.1357</p>
+                        <img src="../static/images/regression_coef.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-primary">
+                        <h3>LASSO Regression Model Evaluation</h3>
+                        <p>Type of linear regression that uses shrinkage. Shrinkage is where data values are shrunk towards a central point, like the mean. This particular type of regression is well-suited for models showing high levels of muticollinearity. Multicollinearity generally occurs when there are high correlations between two or more predictor variables. In other words, one predictor variable can be used to predict the other, hence creating redundant information.</p>
+                        <p> <strong>RMSE:</strong> 0.9302</p>
+                        <p> <strong>R2:</strong> 0.1348</p>
+                        <p> <strong>Total Features dropped:</strong> 10</p>
+                        <img src="../static/images/lasso_coef.png" alt="" class="img-fluid" height="353px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card border-primary">
+                        <h3>RIDGE Regression Model Evaluation</h3>
+                        <p>Ridge Regression is a technique for analyzing multiple regression data that suffer from multicollinearity. When multicollinearity occurs, least squares estimates are unbiased, but their variances are large so they may be far from the true value. By adding a degree of bias to the regression estimates, ridge regression reduces the standard errors. It is hoped that the net effect will be to give estimates that are more reliable.</p>
+                        <p> <strong>RMSE:</strong> 0.9297</p>
+                        <p> <strong>R2:</strong> 0.1357</p>
+                        <p> <strong>Total Features dropped:</strong> 0</p>
+                        <img src="../static/images/ridge_coef.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-primary">
+                        <h3>ElasticNet Regression Model Evaluation</h3>
+                        <p>In statistics and, in particular, in the fitting of linear or logistic regression models, the elastic net is a regularized regression method that linearly combines the L1 and L2 penalties of the lasso and ridge methods.</p>
+                        <p> <strong>RMSE:</strong> 0.9299</p>
+                        <p> <strong>R2:</strong> 0.1354</p>
+                        <p> <strong>Total Features dropped:</strong> 9</p>
+                        <img src="../static/images/elasticnet_coef.png" alt="" class="img-fluid">
+    
+                    </div>
+                </div>
+  
+            </div>
+        </div>
+    </div>
+          
+</header>        
+
+
+
+<!--footer-->
+<footer id="main-footer" class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center py-4">
+                    <h3>BlackFriday</h3>
+                    <p>Copyright &copy; <span id="year"></span></p>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <!--CONTACT MODAL-->
+    <div class="modal fade text-dark" id="contactModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact Us</h5>
+                    <button class="close" data-dismiss="modal">
+                        <span> &times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary btn-block">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="gotopbtn gotopbtn-bottom" href="#"> <i class="fas fa-arrow-up"></i> </a>   
+    
+        <script>
+            // Get the current year for the copyright
+            $('#year').text(new Date().getFullYear())
+    
+            // Init Scrollspy
+            $('body').scrollspy({ target: '#main-nav' });
+    
+            // Smooth Scrolling
+            $("#main-nav a").on('click', function (event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+    
+                const hash = this.hash;
+    
+                $('html, body').animate({
+                scrollTop: $(hash).offset().top
+                }, 800, function () {
+    
+                window.location.hash = hash;
+                });
+            }
+            });
+        </script>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="{{ url_for('static', filename='js/testTable.js') }}"></script>
+        <!-- Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $('#year').text(new Date().getFullYear())
+    </script>
+</body>
+</html>
+        

@@ -128,6 +128,11 @@ def model():
     
     return render_template("Analysis_Processing_Model.html")
 
+@app.route("/otherModels")
+def otherModels():
+    
+    return render_template("Other_Model.html")
+
 @app.route("/dataTable")
 def testTable():
     
