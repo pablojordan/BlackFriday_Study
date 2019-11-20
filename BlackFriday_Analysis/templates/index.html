@@ -244,8 +244,6 @@
             </div>
             </div>
 </section>
-
-
 <!--Data HEAD-->
 <section id="data-head-section">
         <div class="container">
@@ -1866,6 +1864,83 @@
                 <p></p>
             </div>
             </div>
+</section>
+<!--Model Live-->
+<section id="predictor-head-section">
+  <div class="container">
+      <div class="row">
+          <div class="col text-center py-5">
+              <h1 class="display-4">Predictor</h1>
+              <p class="lead">Use the model to predict the purchase amount by completing the form below</p>
+              <!-- <a href="#" class="btn btn-outline-secondary">Find Out More</a> -->
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+              <form method="POST" action="/" role="form", name="donationform">
+                  <div class="form-group">
+                      <label>Gender</label>
+                      <p>Male = 1 | Female = 0</p> 
+                      <input type="text" class="form-control" name="gender" placeholder="0 or 1">
+                  </div>
+                  <div class="form-group">
+                      <label>Age Range</label>
+                      <p>0-17 = 0 | 18-25 = 1 | 26-35 = 2 | 36-45 = 3 |46-50 = 4 | 51-55 = 5 | 55+ = 6</p>
+                      <input type="text" class="form-control" name="age" placeholder="0 to 6">
+                  </div>
+                  <div class="form-group">
+                      <label>Occupation</label>
+                      <input type="text" class="form-control" name="occupation" placeholder="1 to 20">
+                  </div>
+                  <div class="form-group">
+                      <label>City Category</label>
+                      <p>A = 0 | B= 1 | C = 2</p>
+                      <input type="text" class="form-control" name="city" placeholder="0 to 2">
+                  </div>
+                  <div class="form-group">
+                    <label>Stay in Current City (years)</label>
+                    <p>1, 2, 3, +4</p>
+                    <input type="text" class="form-control" name="currentCity" placeholder="1, 2, 3, 4">
+                </div>
+                <div class="form-group">
+                    <label>Marital Status</label>
+                    <input type="text" class="form-control" name="marital" placeholder="Married: 1, Single: 0">
+                </div>
+                <div class="form-group">
+                    <label>Product Category 1</label>
+                    <input type="text" class="form-control" name="prodCat1" placeholder="1 to 18">
+                </div>
+                <div class="form-group">
+                    <label>Product Category 2</label>
+                    <input type="text" class="form-control" name="prodCat2" placeholder="1 to 18">
+                </div>
+                <div class="form-group">
+                  <label>Product Category 3</label>
+                  <input type="text" class="form-control" name="prodCat3" placeholder="1 to 18">
+              </div>
+                  <input type="submit" value="submit" class="btn btn-primary" role="button">
+              </form>
+          </div>
+          <div class="col-md-6">
+              <h5><b>{{ message1 }}</b></h5>
+              <br>
+              </br>
+              <h5><b>{{ message2 }}</b></h5>
+              <h6>{{ message3 }}</h6>
+              <h6>{{ message4 }}</h6>
+              <h6>{{ message5 }}</h6>
+              <h6>{{ message6 }}</h6>
+              <h6>{{ message7 }}</h6>
+              <h6>{{ message8 }}</h6>
+              <h6>{{ message9 }}</h6>
+              <h6>{{ message10 }}</h6>
+              <h6>{{ message11 }}</h6>
+          </div>
+      </div>
+      <div class="row">
+          <p></p>
+      </div>
+  </div>
 </section>
 
 <!--footer-->
