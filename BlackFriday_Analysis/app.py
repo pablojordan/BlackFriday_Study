@@ -33,7 +33,7 @@ def home():
     output11 = ""
 
     if request.method == "POST":
-        pickle_in = open("treeRegressor.pickle","rb")
+        pickle_in = open("../treeRegressor.pickle","rb")
         model = pickle.load(pickle_in)
         print("we are now in post")
         print("form", request.form)
