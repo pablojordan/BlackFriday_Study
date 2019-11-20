@@ -33,7 +33,7 @@ def home():
     output11 = ""
 
     if request.method == "POST":
-        pickle_in = open("BlackFriday_Analysis\\treeRegressor.pickle","rb")
+        pickle_in = open("treeRegressor.pickle","rb")
         model = pickle.load(pickle_in)
         print("we are now in post")
         print("form", request.form)
@@ -62,11 +62,11 @@ def home():
             response2 = '18-25'
         elif age == 2:
             response2 = '26-35'
-        elif age == 2:
+        elif age == 3:
             response2 = '36-45'
-        elif age == 2:
+        elif age == 4:
             response2 = '46-50'
-        elif age == 2:
+        elif age == 5:
             response2 = '51-55'
         else:
             response2 = '55+'   
@@ -107,13 +107,6 @@ def home():
         output9 = f"Product Category 1: {prodCat1}"
         output10 = f"Product Category 2: {prodCat2}"
         output11 = f"Product Category 3: {prodCat3}"
-        # output_message = (f"The purchase amount is {result:.2f}.\n"
-        #                  f"The buyer profile is: A {response5} {response1} with an age range of {response2}\n" 
-        #                  f"with occupation type {occupation}, located in city {response3} for {response4} years.\n" 
-        #                  f"The products categories purchased were: Product Category 1 {prodCat1}, Product Category 2 {prodCat2}\n"
-        #                  f"and Product Category 3 {prodCat3}.\n")
-         
-        # print("Output Message",output_message)
 
     return render_template("index.html", message1 = output1, message2 = output2, message3 = output3, message4 = output4, message5 = output5, message6 = output6, message7 = output7, message8 = output8, message9 = output9, message10 = output10, message11 = output11)
 
