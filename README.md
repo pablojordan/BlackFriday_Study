@@ -57,6 +57,10 @@ from sklearn.tree import export_graphviz
 import pydotplus
 
 ```
+## Exploratory Data Analysis
+> The data analysis was performed using Tableau. Access to Tableau Public with all graphs in the link below.
+>* [Data Analysis Tableau](https://public.tableau.com/profile/pablo.jordan#!/)
+
 
 ## Model Results & Evaluation
 
