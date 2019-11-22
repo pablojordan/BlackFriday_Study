@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BlackFriday</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
+
+<!--NavBar-->
+<section>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" id="main-nav">
+        <div class="container">
+            <a href="#home" class="navbar-brand">
+                <img src="../static/images/logo.jpg" width="250" height="70" alt="">
+            </a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">ANALYSIS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">MODEL</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">DATA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">PREDICTOR</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a href="/" class="nav-link">ABOUT US</a>
+                </li>
+
+                <form class="form-inline ml-auto">
+                    <input type="text" class="form-control mr-2" placeholder="Search">
+                    <button class="btn btn-outline-light">Search</button>
+                </form>
+            </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+
+
+<!--CONTACT SECTION-->
+<section id="contact" class="py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-4">
+                    <div class="card-body">
+                        <h4>Physical Address</h4>
+                        <p>6100 Main St, Houston, TX 77005</p>
+                        <h4>Email</h4>
+                        <p>blackfriday@gmail.com</p>
+                        <h4>Phone</h4>
+                        <p>(888) 888-8888</p>
+                        <h4>Map</h4>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.0466654330835!2d-95.40026528554012!3d29.718407482002046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c07b0628681b%3A0x25f31987bbfeff9d!2s6100%20Main%20St%2C%20Houston%2C%20TX%2077005!5e0!3m2!1sen!2sus!4v1574366062418!5m2!1sen!2sus" width="250" height="165" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h3 class="text-center">Please fill out this form to contact us</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                           <div class="input-group input-group-lg mb-3">
+                               <div class="input-group-prepend">
+                                   <span class="input-group-text">
+                                       <i class="fas fa-user">
+                                       </i>
+                                    </span>
+                               </div>
+                               <input type="text" class="form-control" placeholder="Name">
+                           </div>
+
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-envelope">
+                                        </i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-ellipsis-h">
+                                        </i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+
+                            <div class="input-group input-group-lg mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        </span>
+                                </div>
+                                <textarea type="text" class="form-control" placeholder="Message" rows="6"></textarea>
+                                <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+</section>
+
+
+
+
+<!--Staff Section -->
+<section id="meet-head-section" class="my-5 text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12" style="background:#343A40; color:white; padding-bottom: 4px;" >
+              <div class="info-header mb-5">
+                <h1 class="text-light pb-3" >
+                  MEET THE TEAM
+                </h1>
+                <!-- <p class="lead">
+                    There are our staff who work on this project. 
+                </p> -->
+              </div>
+            </div>
+          </div>
+          
+          <div class="row" style="padding-top:30px">
+            <div class="col-lg-4 col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <img src="../static/images/pablo.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                  <h3>
+                    Pablo Jordan
+                  </h3>
+                  <!-- <h5 class="text-muted">-->
+                  <p>Master in Business Administration <br> Management Consultant  <br>Analytics & Technology Initiatives</p>
+                  <div class="d-flex justify-content-cent">
+                    <div class="p-4">
+                      <a href="https://www.facebook.com/jordan.pablo" >
+                        <i class="fab fa-facebook"  style="font-size:30px"></i>
+                      </a>
+                    </div>
+      
+                    <div class="p-4">
+                      <a href="https://www.linkedin.com/in/pablojordanmba/" >
+                        <i class="fab fa-linkedin" style="font-size:30px"></i>
+                      </a>
+                    </div>
+
+                    <div class="p-4">
+                        <a href="https://twitter.com" >
+                            <i class="fab fa-twitter" style="font-size:30px"></i>
+                        </a>
+                    </div>
+    
+                    <div class="p-4">
+                      <a href="https://github.com/pablojordan/BlackFriday_Study" >
+                        <i class="fab fa-github" style="font-size:30px"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                      <img src="../static/images/meng.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                      <h3>
+                        Meng Chen
+                      </h3>
+                      <p> M.S. in Bioinformatics <br>Computational Biology <br> Data Visualization Initiatives </p>
+                      <div class="d-flex justify-content-cent">
+                        <div class="p-4">
+                          <a href="http://facebook.com" >
+                            <i class="fab fa-facebook" style="font-size:30px"></i>
+                          </a>
+                        </div>
+          
+                        <div class="p-4">
+                          <a href="https://www.linkedin.com/in/meng-chen-86405749/" >
+                            <i class="fab fa-linkedin" style="font-size:30px"></i>
+                          </a>
+                        </div>
+
+                        <div class="p-4">
+                            <a href="https://twitter.com" >
+                                <i class="fab fa-twitter" style="font-size:30px"></i>
+                            </a>
+                        </div>
+
+                        <div class="p-4">
+                          <a href="https://github.com/pablojordan/BlackFriday_Study" >
+                            <i class="fab fa-github" style="font-size:30px"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-4">
+                <div class="card bg-primary text-center card-form">
+                    <div class="card-body">
+                        <h3>Sign Up Today</h3>
+                        <p>Please fill out this form to register</p>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-lg" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-lg" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control form-control-lg" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control form-control-lg" placeholder="Confirm Password">
+                            </div>
+                            <input type="submit" value="Submit" class="btn btn-outline-light btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+      
+            </div>
+          </div>
+      
+      </section>
+      
+
+
+
+
+
+<!--footer-->
+<footer id="main-footer" class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center py-4">
+                <h3>Black Friday</h3>
+                <p>Copyright &copy; <span id="year"></span></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a class="gotopbtn gotopbtn-bottom" href="#"> <i class="fas fa-arrow-up"></i> </a>   
+
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear())
+
+        // Init Scrollspy
+        $('body').scrollspy({ target: '#main-nav' });
+
+        // Smooth Scrolling
+        $("#main-nav a").on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            const hash = this.hash;
+
+            $('html, body').animate({
+            scrollTop: $(hash).offset().top
+            }, 800, function () {
+
+            window.location.hash = hash;
+            });
+        }
+        });
+    </script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+    $('#year').text(new Date().getFullYear())
+</script>
+
+
+</body>
+</html>

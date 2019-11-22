@@ -5,7 +5,11 @@ html{
   }
 
 #home-section .home-inner{
-    padding-top:120px
+    padding-top:120px;
+}
+
+#contact .container{
+  padding-top:80px;
 }
 
 #model-section{
@@ -76,3 +80,10 @@ h2 {
 #table1{
  page-break-inside:auto 
 }
+
+
+#meet-head-section .card:hover{
+  background:lightblue;
+  color:white;
+}
+

@@ -130,10 +130,15 @@ def otherModels():
     
     return render_template("Other_Model.html")
 
+@app.route("/about")
+def about():
+    
+    return render_template("about.html")
+
 @app.route("/dataTable")
 def testTable():
     
     return render_template("testTableFinalCLEAN100.json")
 
 if __name__ == '__main__':
-    app.run(debug = True, port = 5021)  #
+    app.run(debug = True, port = 5022)  #
