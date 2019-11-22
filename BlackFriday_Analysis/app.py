@@ -15,25 +15,40 @@ from sklearn.model_selection import cross_val_score
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET", "POST"])
-def home():
+@app.route("/")
+def index():
+    """Return the homepage."""
+    return render_template("index.html")
+
+@app.route("/model")
+def model():
+    
+    return render_template("Analysis_Processing_Model.html")
+
+@app.route("/otherModels")
+def otherModels():
+    
+    return render_template("Other_Model.html")
+
+@app.route("/predictor", methods=["GET", "POST"])
+def predictor():
     # print("we hit the home function")
     output1 = ""
     output2 = ""
-    output3 = ""
-    output4 = ""
-    output5 = ""
-    output6 = ""
-    output7 = ""
-    output8 = ""
-    output9 = ""
-    output10 = ""
-    output11 = ""
+    marital3 = ""
+    gender4 = ""
+    age5 = ""
+    occupation6 = ""
+    city7 = ""
+    current8 = ""
+    cat1_9 = ""
+    cat2_10 = ""
+    cat3_11 = ""
 
     if request.method == "POST":
         with open('BlackFriday_Analysis/treeRegressor.pickle', 'rb') as fh:
             model = pickle.load(fh)
-        print("model options 2", dir(model))
+        # print("model options 2", dir(model))
 
         # pickle_in = open("treeRegressor.pickle","rb")
         
@@ -100,35 +115,21 @@ def home():
 
         result = result[0]
         
-        output1 = f"The predicted purchase amount is {result:.2f}." 
-        output2 = f"The buyer's profile is:"
-        output3 = f"Marital Status: {response5}"
-        output4 = f"Gender: {response1}"
-        output5 = f"Age Range: {response2}"
-        output6 = f"Occupation: {occupation}"
-        output7 = f"Current City: {response3}"
-        output8 = f"Stay in Current City: {response4} years"
-        output9 = f"Product Category 1: {prodCat1}"
-        output10 = f"Product Category 2: {prodCat2}"
-        output11 = f"Product Category 3: {prodCat3}"
+        output1 = f"The predicted purchase amount is {result:.2f}" 
+        output2 = f"Buyer's profile:"
+        marital3 = f"{response5}"
+        gender4 = f"{response1}"
+        age5 = f"{response2}"
+        occupation6 = f"{occupation}"
+        city7 = f"{response3}"
+        current8 = f"{response4} years"
+        cat1_9 = f"{prodCat1}"
+        cat2_10 = f"{prodCat2}"
+        cat3_11 = f"{prodCat3}"
 
-    return render_template("index.html", message1 = output1, message2 = output2, message3 = output3, message4 = output4, message5 = output5, message6 = output6, message7 = output7, message8 = output8, message9 = output9, message10 = output10, message11 = output11)
-
-@app.route("/")
-def index():
-    """Return the homepage."""
-    return render_template("index.html")
+    return render_template("predictor.html", message1 = output1, message2 = output2, message3 = marital3, message4 = gender4, message5 = age5, message6 = occupation6, message7 = city7, message8 = current8, message9 = cat1_9, message10 = cat2_10, message11 = cat3_11)
 
 
-@app.route("/model")
-def model():
-    
-    return render_template("Analysis_Processing_Model.html")
-
-@app.route("/otherModels")
-def otherModels():
-    
-    return render_template("Other_Model.html")
 
 @app.route("/about")
 def about():
